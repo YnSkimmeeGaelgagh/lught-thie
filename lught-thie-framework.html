@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+
+    <style>
+
+        * {
+            font-family: 'ABeeZee', sans-serif;
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%;
+            font-size: 25px;
+        }
+    
+        body {
+            border: solid black 12px;
+            width: 100vw;
+            height: 100vh;
+        }
+    
+        .flex-container {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            overflow: hidden;  
+        }
+
+        [class*="row-"] {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            border: dashed red 3px;
+        }
+
+        .row-cont {
+            border: solid green 3px;
+        }
+
+        .row-panel {
+            display: flex;
+            justify-content: center;
+        }
+
+        .panel {
+            flex: 0 0 auto;
+            padding: 16px;
+            transform: translate(100%);
+        }
+    
+        .row-1 {height: calc(100%/12);}
+        .row-2 {height: calc(100%/12*2);}
+        .row-3 {height: calc(100%/12*3);}
+        .row-4 {height: calc(100%/12*4);}
+        .row-5 {height: calc(100%/12*5);}
+        .row-6 {height: calc(100%/12*6);}
+        .row-7 {height: calc(100%/12*7);}
+        .row-8 {height: calc(100%/12*8);}
+        .row-9 {height: calc(100%/12*9);}
+        .row-10 {height: calc(100%/12*10);}
+        .row-11 {height: calc(100%/12*11);}
+        .row-12 {height: 100%;}
+
+        .row-panel img {
+            height: 40vh;
+            opacity: .25;
+        }
+
+    </style>
+
+    <body>
+        <div class="flex-container">
+            <div class="row-1">
+                <div class="row-cont">PROGRESS</div>
+            </div>
+            <div class="row-6">
+                <span class="row-panel">
+                    <span class="panel"><img id="pic0" src="picture.jpg"></span>
+                    <span class="panel"><img id="pic1" src="picture_2.jpg"></span>
+                    <span class="panel"><img id="pic2" src="picture.jpg"></span>
+                </span>
+            </div>
+            <div class="row-3">
+                <span class="row-cont">INFO</span>
+            </div>
+            <div class="row-2">
+                <span class="row-cont" onclick="slide(-1)"><i class="fa fa-light fa-chevron-left"></i></span>
+                <span class="row-cont">NAVIGATION</span>
+                <span class="row-cont" onclick="slide(1)"><i class="fa fa-light fa-chevron-right"></i></span>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let slideAmt = 0;
+        let img = 0;
+        document.getElementById("pic0").style.opacity = 1;
+        function slide (s) {
+            let panels = gsap.utils.toArray(".panel");
+            slideAmt -= 100*s;
+            gsap.to(panels, {xPercent: slideAmt});
+            img += s;
+            gsap.to("#pic" + (img-1), {opacity: .25});
+            gsap.to("#pic" + (img+1), {opacity: .25});
+            gsap.to("#pic" + img, {opacity: 1});
+        }
+    </script>
+</html>
