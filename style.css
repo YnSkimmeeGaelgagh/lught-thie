@@ -1,0 +1,91 @@
+* {
+    font-family: 'ABeeZee', sans-serif;
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-size: 23px;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+    }
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+[class*="row-"] {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.row-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.panel {
+    flex: 0 0 auto;
+    padding: 16px;
+    transform: translate(650%);
+}
+
+.row-1 {flex: 10vh;}
+.row-2 {flex: 20vh;}
+.row-3 {flex: 30vh;}
+.row-4 {flex: 40vh;}
+.row-5 {flex: 50vh;}
+.row-6 {flex: 60vh;}
+.row-7 {flex: 70vh;}
+.row-8 {flex: 80vh;}
+.row-9 {flex: 90vh;}
+.row-10 {flex: 100vh;}
+
+.row-panel img {
+    height: 35vh;
+    opacity: .25;
+}
+
+#info-box {
+    text-align: center;
+    display: inline;
+}
+
+.progress {
+    background-color: yellowgreen;
+    height: 3vh;
+    width: 4vw;
+}
+
+.fa-play:hover {
+    cursor: pointer;
+}
+
+.raad:hover {
+    cursor: pointer;
+}
+
+/* grammar */
+
+.grammar:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+.posspro {
+    color: yellowgreen;
+}
+
+.mutation {
+    color: purple;
+}
