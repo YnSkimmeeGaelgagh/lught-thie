@@ -1,0 +1,192 @@
+* {
+    font-family: 'ABeeZee', sans-serif;
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-size: 23px;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+[class*="row-"] {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.row-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.panel {
+    flex: 0 0 auto;
+    transform: translate(650%);
+}
+
+#fys {
+    padding: 8px 16px 8px 16px;
+}
+
+.inter {
+    padding-top: 16px;
+}
+
+#ansoor {
+    display: none;
+}
+
+.cur-stiagh {
+    text-align: center;
+}
+
+#cramman {
+    /* ripple effect */
+    position: relative;
+    overflow: none;
+    color: #fff;
+    background-color: purple;
+    font-size: 1rem;
+    outline: 0;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    /* other styling */
+    border: none;
+    width: 30vw;
+    height: 5vh;
+    display: none;
+}
+
+#r-chev {
+    position: relative;
+}
+
+#l-chev {
+    position: relative;
+}
+
+span.tonnane {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: tonnane 600ms linear;
+    background-color: cornflowerblue;
+}
+
+@keyframes tonnane {
+    to {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+#moyll, #reesht {
+    display: none;
+    color: yellowgreen;
+}
+
+.row-1 {height: 10vh;}
+.row-2 {height: 20vh;}
+.row-3 {height: 30vh;}
+.row-4 {height: 40vh;}
+.row-5 {height: 50vh;}
+.row-6 {height: 60vh;}
+.row-7 {height: 70vh;}
+.row-8 {height: 80vh;}
+.row-9 {height: 90vh;}
+.row-10 {height: 100vh;}
+
+.row-panel img {
+    height: 35vh;
+    opacity: .25;
+}
+
+#info-box {
+    text-align: center;
+    display: inline;
+}
+
+.progress {
+    background-color: yellowgreen;
+    height: 3vh;
+    width: 4vw;
+}
+
+.foll-beg {
+    display: none;
+}
+
+/* grammar */
+
+.posspro {
+    color: yellowgreen;
+}
+
+.mutation {
+    color: purple;
+}
+
+input[type="text"]::placeholder {
+    font-size:20px;
+    color:rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (min-width: 600px) {
+
+    * {
+        font-size: 26px;
+    }
+
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        /* max-width: 600px; */
+    }
+
+    .fa-play:hover {
+        cursor: pointer;
+    }
+
+    #cramman {
+        width: 10vw;
+    }
+
+    #cramman:hover {
+        background: grey;
+    }
+
+    .raad:hover {
+        cursor: pointer;
+    }
+
+    .grammar:hover {
+        color: grey;
+        cursor: pointer;
+    }
+
+    #backward {
+        font-size: 40px;
+    }
+
+    #cloie {
+        font-size: 40px;
+    }
+
+    #forward {
+        font-size: 40px;
+    }
+
+    .foll-beg {
+        display: inline;
+        width: 40vw;
+    }
+}
