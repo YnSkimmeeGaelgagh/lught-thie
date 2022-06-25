@@ -1,0 +1,217 @@
+* {
+    font-family: 'ABeeZee', sans-serif;
+    box-sizing: border-box;
+    font-size: 23px;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+.container {
+    overflow: hidden;
+}
+
+#prog {
+    padding-top: 10px;
+    height: 50px;
+}
+
+.progress {
+    background-color: yellowgreen;
+    height: 3vh;
+    width: 4vw;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pic {
+    height: 200px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.panel {
+    height: 100%;
+    flex: 0 0 auto;
+    transform: translate(650%);
+    opacity: 0;
+}
+
+#fys {
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 8px 16px 8px 16px;
+}
+
+#nav {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.b-bar {
+    width: 33%;
+    text-align: center;
+}
+
+.inter {
+    padding-top: 16px;
+    text-align: center;
+}
+
+#ansoor {
+    display: none;
+    text-align: center;
+}
+
+.cur-stiagh {
+    height: 100px;
+    padding: 16px;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cramman {
+    /* ripple effect */
+    position: relative;
+    overflow: none;
+    color: #fff;
+    background-color: purple;
+    font-size: 1rem;
+    outline: 0;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    /* other styling */
+    border: none;
+    width: 30vw;
+    height: 5vh;
+    display: none;
+}
+
+#r-chev {
+    position: relative;
+}
+
+#l-chev {
+    position: relative;
+}
+
+span.tonnane {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: tonnane 600ms linear;
+    background-color: cornflowerblue;
+}
+
+@keyframes tonnane {
+    to {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+#moyll, #reesht {
+    display: none;
+    color: yellowgreen;
+}
+
+.row-1 {height: 60px;}
+.row-2 {height: 120px;}
+.row-3 {height: 180px;}
+.row-4 {height: 240px;}
+.row-5 {height: 300px;}
+.row-6 {height: 360px;}
+.row-7 {height: 420px;}
+.row-8 {height: 480px;}
+.row-9 {height: 540px;}
+.row-10 {height: 600px;}
+
+/* grammar */
+
+#grammeydys {
+    padding: 16px;
+    color: grey;
+    text-align: center;
+    font-size: 20px;
+    display: none;
+}
+
+.posspro {
+    color: yellowgreen;
+}
+
+.mutation {
+    color: purple;
+}
+
+input[type="text"]::placeholder {
+    font-size:20px;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (min-width: 600px) {
+
+    * {
+        font-size: 26px;
+    }
+
+    .fa-play:hover {
+        cursor: pointer;
+    }
+
+    #cramman {
+        width: 10vw;
+    }
+
+    #cramman:hover {
+        background: grey;
+    }
+
+    .raad:hover {
+        cursor: pointer;
+    }
+
+    .grammar:hover {
+        color: grey;
+        cursor: pointer;
+    }
+
+    .cur-stiagh {
+        padding: 32px;
+    }
+
+    #backward {
+        font-size: 40px;
+    }
+
+    #cloie {
+        font-size: 40px;
+    }
+
+    #forward {
+        font-size: 40px;
+    }
+
+    .foll-beg {
+        display: inline;
+        width: 40vw;
+    }
+}
